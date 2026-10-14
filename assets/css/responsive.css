@@ -1,0 +1,296 @@
+/* ==========================================================================
+   VISHAL TOMAR — ADVOCATE, GUJARAT HIGH COURT
+   Responsive Design & Mobile Ergonomics
+   ========================================================================== */
+
+/* --- LAPTOP / MEDIUM DESKTOP (max-width: 1200px) --- */
+@media (max-width: 1200px) {
+  :root {
+    --container-max: 1040px;
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .process-timeline {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+  .process-timeline::before {
+    display: none;
+  }
+}
+
+/* --- TABLET (max-width: 991px) --- */
+@media (max-width: 991px) {
+  .section {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .section-lg {
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+  }
+
+  /* Header adjustments */
+  .site-nav {
+    display: none;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  /* Split sections stack */
+  .hero-grid,
+  .bio-split,
+  .cta-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .hero-visual-frame {
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  .hero-image-wrapper img {
+    height: 380px;
+  }
+
+  .hero-badge-overlay {
+    bottom: -1rem;
+    left: -1rem;
+  }
+
+  /* Hero cinematic slider tablet ergonomics */
+  .hero-cinematic-slider {
+    min-height: 820px;
+    height: auto;
+    padding-top: 7rem;
+    padding-bottom: 6rem;
+  }
+
+  .hero-nav-arrow {
+    width: 44px;
+    height: 44px;
+  }
+  .hero-arrow-prev { left: 1rem; }
+  .hero-arrow-next { right: 1rem; }
+
+  .hero-slider-pagination {
+    right: 1.5rem;
+    bottom: 2rem;
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1rem;
+  }
+
+  .metric-item:nth-child(2)::after {
+    display: none;
+  }
+
+  .pillars-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bci-modal-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- MOBILE PHONE (max-width: 767px) --- */
+@media (max-width: 767px) {
+  :root {
+    --header-height: 74px;
+  }
+
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .top-notice-bar,
+  .top-disclaimer-bar {
+    display: none;
+  }
+
+  .site-header.hero-transparent-header {
+    top: 0;
+  }
+
+  .brand-title {
+    font-size: 1.15rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.55rem;
+    letter-spacing: 0.18em;
+  }
+
+  .brand-monogram-box {
+    width: 36px;
+    height: 36px;
+  }
+
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Mobile Cinematic Hero */
+  .hero-cinematic-slider {
+    min-height: 100vh;
+    height: auto;
+    padding-top: 6.5rem;
+    padding-bottom: 5rem;
+  }
+
+  .hero-headline {
+    font-size: 2.2rem;
+    line-height: 1.18;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .btn-gold-solid,
+  .btn-gold-ghost {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-nav-arrow {
+    display: none;
+  }
+
+  .hero-scroll-indicator {
+    display: none;
+  }
+
+  .hero-slider-pagination {
+    bottom: 1.5rem;
+    left: 1.25rem;
+    right: auto;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .metric-item::after {
+    display: none;
+  }
+
+  .process-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .footer-bottom-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .bci-modal-card {
+    padding: 2rem 1.25rem;
+  }
+
+  .bci-modal-title {
+    font-size: 1.7rem;
+  }
+
+  .bci-modal-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .bci-modal-actions .btn {
+    width: 100%;
+  }
+
+  .contact-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .page-hero-cinematic,
+  .page-hero-dark {
+    min-height: 440px;
+    padding-top: calc(var(--header-height) + 40px);
+    padding-bottom: 3.5rem;
+  }
+
+  .page-cinematic-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .page-cinematic-actions .btn-hero-primary {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* --- SMALL MOBILE (max-width: 480px) --- */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.1rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .btn {
+    padding: 0.85rem 1.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* --- PRINT MEDIA --- */
+@media print {
+  .site-header,
+  .top-notice-bar,
+  .site-footer,
+  .scroll-top-btn,
+  .bci-modal-overlay {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+}

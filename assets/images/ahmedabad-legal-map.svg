@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mapBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D111B"/>
+      <stop offset="50%" stop-color="#1F0C13"/>
+      <stop offset="100%" stop-color="#14080D"/>
+    </linearGradient>
+    <linearGradient id="goldPin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2D795"/>
+      <stop offset="100%" stop-color="#C5A15B"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#4B1929" stroke-width="0.75" stroke-opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <!-- Dark Cartographic Background -->
+  <rect width="1000" height="500" fill="url(#mapBg)"/>
+  <rect width="1000" height="500" fill="url(#grid)"/>
+
+  <!-- Sabarmati River Stylized Path -->
+  <path d="M 720 -20 C 700 80, 750 160, 710 260 C 670 360, 720 440, 690 520" fill="none" stroke="#3D1826" stroke-width="32" stroke-linecap="round" opacity="0.6"/>
+  <path d="M 720 -20 C 700 80, 750 160, 710 260 C 670 360, 720 440, 690 520" fill="none" stroke="#C5A15B" stroke-width="1.5" stroke-opacity="0.25"/>
+
+  <!-- Main Arterials: SG Highway, SP Ring Road, Ashram Road -->
+  <!-- S.G. Highway (Diagonal North-South) -->
+  <path d="M 280 -10 L 460 510" stroke="#702D43" stroke-width="4" stroke-opacity="0.8"/>
+  <path d="M 280 -10 L 460 510" stroke="#C5A15B" stroke-width="1.2" stroke-dasharray="8 4" stroke-opacity="0.6"/>
+  
+  <!-- S.P. Ring Road (Outer Arc) -->
+  <path d="M 120 0 C 140 220, 180 380, 260 510" stroke="#5A1F32" stroke-width="3" stroke-opacity="0.7"/>
+
+  <!-- Major Cross Roads (Drive-in / Bodakdev / Thaltej / SG Cross) -->
+  <line x1="160" y1="180" x2="620" y2="120" stroke="#4B1929" stroke-width="2.5" stroke-opacity="0.6"/>
+  <line x1="220" y1="280" x2="680" y2="240" stroke="#4B1929" stroke-width="2.5" stroke-opacity="0.6"/>
+  <line x1="280" y1="380" x2="720" y2="360" stroke="#4B1929" stroke-width="2.5" stroke-opacity="0.6"/>
+
+  <!-- Road Labels -->
+  <text x="310" y="70" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="600" fill="#B9828F" letter-spacing="1.5" transform="rotate(71, 310, 70)">S.G. HIGHWAY CORRIDOR</text>
+  <text x="735" y="220" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="500" fill="#702D43" letter-spacing="2">SABARMATI RIVER</text>
+
+  <!-- Landmark 1: Gujarat High Court (Sola) -->
+  <g transform="translate(340, 110)">
+    <!-- Pulse ring -->
+    <circle cx="0" cy="0" r="28" fill="none" stroke="#C5A15B" stroke-width="1" stroke-opacity="0.4">
+      <animate attributeName="r" values="18;34;18" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values="0.7;0.1;0.7" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="14" fill="#4B1929" stroke="url(#goldPin)" stroke-width="2"/>
+    <circle cx="0" cy="0" r="5" fill="#E5C77E"/>
+    
+    <!-- Info Badge -->
+    <rect x="24" y="-34" width="230" height="58" rx="4" fill="#3E1421" stroke="#C5A15B" stroke-width="1" filter="drop-shadow(0 4px 12px rgba(0,0,0,0.5))"/>
+    <text x="36" y="-16" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#C5A15B" letter-spacing="1">PRIMARY JURISDICTION</text>
+    <text x="36" y="0" font-family="'Cormorant Garamond', Georgia, serif" font-size="16" font-weight="700" fill="#F7F2ED">Gujarat High Court</text>
+    <text x="36" y="14" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#B9828F">Sola, S.G. Highway, Ahmedabad</text>
+  </g>
+
+  <!-- Landmark 2: Vishal Tomar Chambers (S.G. Highway / Bodakdev) -->
+  <g transform="translate(420, 270)">
+    <!-- Pulse ring -->
+    <circle cx="0" cy="0" r="32" fill="none" stroke="#C5A15B" stroke-width="1.5" stroke-opacity="0.6">
+      <animate attributeName="r" values="20;38;20" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values="0.9;0.2;0.9" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <polygon points="0,-16 14,0 0,16 -14,0" fill="#702D43" stroke="url(#goldPin)" stroke-width="2.5"/>
+    <circle cx="0" cy="0" r="4" fill="#FFFFFF"/>
+
+    <!-- Info Badge -->
+    <rect x="-270" y="-36" width="245" height="64" rx="4" fill="#240B13" stroke="#C5A15B" stroke-width="1.2" filter="drop-shadow(0 4px 14px rgba(0,0,0,0.6))"/>
+    <text x="-256" y="-18" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#C5A15B" letter-spacing="1.2">MAIN ADVOCATE CHAMBERS</text>
+    <text x="-256" y="-1" font-family="'Cormorant Garamond', Georgia, serif" font-size="16" font-weight="700" fill="#F7F2ED">Chambers of Vishal Tomar</text>
+    <text x="-256" y="14" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#E9DFD5">S.G. Highway Legal Enclave (Placeholder)</text>
+  </g>
+
+  <!-- Landmark 3: NCLT & Commercial Courts -->
+  <g transform="translate(480, 400)">
+    <circle cx="0" cy="0" r="10" fill="#3E1421" stroke="#C5A15B" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="3" fill="#C5A15B"/>
+    <rect x="20" y="-22" width="210" height="44" rx="3" fill="#2C0F19" stroke="#702D43" stroke-width="1"/>
+    <text x="30" y="-8" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#B9828F" letter-spacing="0.8">TRIBUNAL PRACTICE</text>
+    <text x="30" y="8" font-family="'Cormorant Garamond', Georgia, serif" font-size="14" font-weight="600" fill="#F7F2ED">NCLT &amp; Commercial Courts</text>
+  </g>
+
+  <!-- Map Compass Rose -->
+  <g transform="translate(930, 70)" stroke="#C5A15B" stroke-width="0.8" opacity="0.7">
+    <circle cx="0" cy="0" r="22" fill="none" stroke-width="0.5"/>
+    <line x1="0" y1="-26" x2="0" y2="26"/>
+    <line x1="-26" y1="0" x2="26" y2="0"/>
+    <polygon points="0,-24 4,-6 0,-2 -4,-6" fill="#C5A15B"/>
+    <text x="-4" y="-29" font-family="'Plus Jakarta Sans', sans-serif" font-size="10" font-weight="700" fill="#C5A15B">N</text>
+  </g>
+</svg>
