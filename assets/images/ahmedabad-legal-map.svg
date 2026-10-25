@@ -56,7 +56,7 @@
     <text x="36" y="14" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#B9828F">Sola, S.G. Highway, Ahmedabad</text>
   </g>
 
-  <!-- Landmark 2: Vishal Tomar Chambers (S.G. Highway / Bodakdev) -->
+  <!-- Landmark 2: Vishalkumar R Tomar Chambers (S.G. Highway / Bodakdev) -->
   <g transform="translate(420, 270)">
     <!-- Pulse ring -->
     <circle cx="0" cy="0" r="32" fill="none" stroke="#C5A15B" stroke-width="1.5" stroke-opacity="0.6">
@@ -69,7 +69,7 @@
     <!-- Info Badge -->
     <rect x="-270" y="-36" width="245" height="64" rx="4" fill="#240B13" stroke="#C5A15B" stroke-width="1.2" filter="drop-shadow(0 4px 14px rgba(0,0,0,0.6))"/>
     <text x="-256" y="-18" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#C5A15B" letter-spacing="1.2">MAIN ADVOCATE CHAMBERS</text>
-    <text x="-256" y="-1" font-family="'Cormorant Garamond', Georgia, serif" font-size="16" font-weight="700" fill="#F7F2ED">Chambers of Vishal Tomar</text>
+    <text x="-256" y="-1" font-family="'Cormorant Garamond', Georgia, serif" font-size="16" font-weight="700" fill="#F7F2ED">Chambers of Vishalkumar R Tomar</text>
     <text x="-256" y="14" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" fill="#E9DFD5">S.G. Highway Legal Enclave (Placeholder)</text>
   </g>
 

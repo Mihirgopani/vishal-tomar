@@ -1,11 +1,11 @@
-# VISHAL TOMAR — ADVOCATE, GUJARAT HIGH COURT
+# Vishalkumar R Tomar — ADVOCATE, GUJARAT HIGH COURT
 ## Premium Digital Identity & Multi-Page Prototype Presentation
 
 ---
 
 ### Executive Creative Direction
 
-Designed specifically for **Advocate Vishal Tomar** (Gujarat High Court, Ahmedabad), this digital identity translates the ambition, intellectual sharpness, and strategic command of a next-generation counsel (approx. 30–35 years of age) into a luxury legal editorial experience.
+Designed specifically for **Advocate Vishalkumar R Tomar** (Gujarat High Court, Ahmedabad), this digital identity translates the ambition, intellectual sharpness, and strategic command of a next-generation counsel (approx. 30–35 years of age) into a luxury legal editorial experience.
 
 Rather than adhering to clichéd, mass-produced legal themes or dark, monotonous interfaces, the identity introduces:
 - **Architectural Editorial Layouts:** High-contrast serif headlines paired with refined geometric sans-serif supporting text.
@@ -39,7 +39,7 @@ The website prototype is built using **static, dependency-free HTML5, CSS3, and 
 ```
 vishal-tomar/
 ├── index.html                   # 01. Homepage with Hero, Profile, Practice Grid & BCI Modal
-├── about.html                   # 02. About Advocate Vishal Tomar, Admissions & Chambers Ethos
+├── about.html                   # 02. About Advocate Vishalkumar R Tomar, Admissions & Chambers Ethos
 ├── practice-areas.html          # 03. Practice Areas Directory with Category Filtering
 ├── practice-area-detail.html    # 04. Deep Dive: Constitutional & Writ Litigation (Art. 226/227)
 ├── sectors.html                 # 05. Working Sectors Overview across Gujarat Industry

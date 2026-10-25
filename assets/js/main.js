@@ -1,5 +1,5 @@
 /**
- * VISHAL TOMAR — ADVOCATE, GUJARAT HIGH COURT
+ * Vishalkumar R Tomar — ADVOCATE, GUJARAT HIGH COURT
  * Interactive Script & Client Experience Engine
  */
 
@@ -42,7 +42,7 @@ function initDisclaimerModal() {
       localStorage.setItem('vt_legal_disclaimer_accepted', 'true');
       modal.classList.remove('active');
       document.body.style.overflow = '';
-      showToast('Disclaimer accepted. Welcome to the Chambers of Vishal Tomar.');
+      showToast('Disclaimer accepted. Welcome to the Chambers of Vishalkumar R Tomar.');
     });
   }
 
@@ -526,7 +526,7 @@ function showConsultationConfirmationModal(name, refId) {
           <polyline points="20 6 9 17 4 12"></polyline>
         </svg>
       </div>
-      <div class="bci-modal-subtitle">CHAMBERS OF VISHAL TOMAR</div>
+      <div class="bci-modal-subtitle">CHAMBERS OF Vishalkumar R Tomar</div>
       <h3 class="bci-modal-title" style="font-size: 1.8rem;">Enquiry Transmitted</h3>
       <p style="color: var(--color-gold-champagne); font-style: italic; margin-bottom: 1.5rem;">
         Reference: #${refId}
