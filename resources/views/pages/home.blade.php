@@ -455,37 +455,6 @@
     </div>
   </section>
 
-  <!-- 08. WORKING SECTORS OVERVIEW -->
-  <section class="section bg-wine text-light" id="sectors">
-    <div class="container">
-      <div class="section-header">
-        <div class="eyebrow" style="color: var(--color-gold-antique);">Sector Engagement</div>
-        <h2 style="color: #fff;">Industry Context in Western India</h2>
-        <p class="section-desc" style="color: var(--color-text-light-muted);">
-          Understanding commercial ecosystems allows for strategic legal risk containment in Gujarat’s thriving manufacturing, infrastructure, and financial hubs.
-        </p>
-      </div>
-
-      <div class="grid-4">
-        @foreach($sectors as $sec)
-        <div class="card-practice card-practice-dark">
-          <div class="card-practice-icon">
-            <img src="{{ asset($sec['icon']) }}" alt="{{ $sec['title'] }} Icon" width="44" height="44">
-          </div>
-          <h3 class="card-practice-title" style="font-size: 1.25rem;">{{ $sec['title'] }}</h3>
-          <p class="card-practice-desc">
-            {{ $sec['summary'] }}
-          </p>
-          <a href="{{ route('sectors.detail', $sec['slug']) }}" class="editorial-link gold">Explore Sector →</a>
-        </div>
-        @endforeach
-      </div>
-
-      <div style="margin-top: 3rem; text-align: center;">
-        <a href="{{ route('sectors') }}" class="btn btn-outline-gold">View All Client Working Sectors</a>
-      </div>
-    </div>
-  </section>
 
   <!-- 09. FEATURED LEGAL INSIGHTS -->
   <section class="section bg-ivory" id="insights">
@@ -547,3 +516,4 @@
   </section>
 
 @endsection
+

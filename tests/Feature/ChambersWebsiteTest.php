@@ -87,16 +87,26 @@ class ChambersWebsiteTest extends TestCase
         $response->assertSee('4D SQUARE MALL');
     }
 
-    public function test_sectors_pages_render(): void
+    public function test_sectors_routes_redirect_to_services(): void
     {
         $response = $this->get(route('sectors'));
-        $response->assertStatus(200);
+        $response->assertRedirect(route('services'));
 
-        foreach (config('chambers.sectors') as $sec) {
-            $secResponse = $this->get(route('sectors.detail', $sec['slug']));
-            $secResponse->assertStatus(200);
-            $secResponse->assertSee($sec['title']);
-        }
+        $detailResponse = $this->get('/sectors/corporate-commercial');
+        $detailResponse->assertRedirect(route('services'));
+    }
+
+    public function test_phone_number_and_address_present_on_pages(): void
+    {
+        $response = $this->get(route('home'));
+        $response->assertStatus(200);
+        $response->assertSee('98988 77690');
+        $response->assertSee('FIRST FLOOR, 4D SQUARE MALL, 13, VISAT-GANDHINAGAR HIGHWAY, Motera, Ahmedabad, Gujarat 380005');
+
+        $contactResponse = $this->get(route('contact'));
+        $contactResponse->assertStatus(200);
+        $contactResponse->assertSee('98988 77690');
+        $contactResponse->assertSee('FIRST FLOOR, 4D SQUARE MALL');
     }
 
     public function test_insights_pages_render(): void

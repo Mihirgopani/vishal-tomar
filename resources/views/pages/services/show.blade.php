@@ -155,13 +155,13 @@
           <h4 class="sidebar-title">Chambers Headquarters</h4>
           <p style="font-size: 0.85rem; color: var(--color-text-secondary); line-height: 1.5; margin-bottom: 1rem;">
             <strong>THE CHAMBER OF V R TOMAR</strong><br>
-            First Floor, 4D Square Mall, 13,<br>
-            Visat-Gandhinagar Highway, Motera,<br>
-            Ahmedabad, Gujarat 380005
+            FIRST FLOOR, 4D SQUARE MALL, 13,<br>
+            VISAT-GANDHINAGAR HIGHWAY, Motera,<br>
+            Ahmedabad, Gujarat 380005, India
           </p>
           <div style="font-size: 0.85rem; color: var(--color-burgundy-deep); font-weight: 600;">
             Email: <a href="mailto:{{ config('chambers.email') }}">{{ config('chambers.email') }}</a><br>
-            Direct: <a href="tel:{{ config('chambers.phone') }}">{{ config('chambers.phone') }}</a>
+            Direct: <a href="tel:{{ config('chambers.phone_tel', '+919898877690') }}">{{ config('chambers.phone_display', '98988 77690') }}</a>
           </div>
         </div>
       </aside>
@@ -170,3 +170,4 @@
   </section>
 
 @endsection
+

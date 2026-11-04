@@ -43,3 +43,4 @@ class ConsultationEnquiryMail extends Mailable
         return [];
     }
 }
+

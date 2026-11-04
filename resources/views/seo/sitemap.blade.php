@@ -38,20 +38,7 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-    <url>
-        <loc>{{ route('sectors') }}</loc>
-        <lastmod>{{ date('Y-m-d') }}</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    @foreach($sectors as $sector)
-    <url>
-        <loc>{{ route('sectors.detail', $sector['slug']) }}</loc>
-        <lastmod>{{ date('Y-m-d') }}</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    @endforeach
+
     <url>
         <loc>{{ route('insights') }}</loc>
         <lastmod>{{ date('Y-m-d') }}</lastmod>
@@ -85,3 +72,4 @@
         <priority>0.5</priority>
     </url>
 </urlset>
+

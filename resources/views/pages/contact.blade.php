@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Contact Chambers & Appointments — The Chamber of V R Tomar | Ahmedabad')
-@section('meta_description', 'Schedule a consultation with Advocate Vishalkumar R Tomar at 4D Square Mall, Motera, Ahmedabad. Email: info@thechamberofvrtomar.com. Phone: +91 98250 88910.')
+@section('meta_description', 'Schedule a consultation with Advocate Vishalkumar R Tomar at 4D Square Mall, Motera, Ahmedabad. Email: info@thechamberofvrtomar.com. Phone: +91 98988 77690.')
 
 @section('content')
 
@@ -98,8 +98,8 @@
             <div>
               <div class="info-title">Chambers Direct Lines</div>
               <div class="info-text">
-                Advocate Desk: <a href="tel:{{ config('chambers.phone') }}" style="color: var(--color-burgundy-deep); font-weight: 600;">{{ config('chambers.phone') }}</a><br>
-                Registry Office: {{ config('chambers.registry_phone') }}
+                Advocate Desk: <a href="tel:{{ config('chambers.phone_tel', '+919898877690') }}" style="color: var(--color-burgundy-deep); font-weight: 700;">+91 {{ config('chambers.phone_display', '98988 77690') }}</a><br>
+                Direct Line: <a href="tel:{{ config('chambers.phone_tel', '+919898877690') }}" style="color: var(--color-text-secondary); text-decoration: none;">{{ config('chambers.phone_display', '98988 77690') }}</a>
               </div>
             </div>
           </div>
@@ -243,3 +243,4 @@
   </section>
 
 @endsection
+

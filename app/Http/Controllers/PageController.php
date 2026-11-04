@@ -16,10 +16,9 @@ class PageController extends Controller
         $workingAreas = $chambers['working_areas'];
         $reviews = $chambers['reviews'];
         $galleryHighlights = array_slice($chambers['gallery'], 0, 6);
-        $sectors = $chambers['sectors'];
         $insights = $chambers['insights'];
 
-        return view('pages.home', compact('chambers', 'workingAreas', 'reviews', 'galleryHighlights', 'sectors', 'insights'));
+        return view('pages.home', compact('chambers', 'workingAreas', 'reviews', 'galleryHighlights', 'insights'));
     }
 
     /**
@@ -83,32 +82,19 @@ class PageController extends Controller
     }
 
     /**
-     * Working Sectors directory
+     * Working Sectors directory (redirects to Working Areas)
      */
     public function sectors()
     {
-        $chambers = config('chambers');
-        $sectors = $chambers['sectors'];
-        return view('pages.sectors.index', compact('chambers', 'sectors'));
+        return redirect()->route('services', [], 301);
     }
 
     /**
-     * Sector detail
+     * Sector detail (redirects to Working Areas)
      */
-    public function sectorDetail($slug)
+    public function sectorDetail($slug = null)
     {
-        $chambers = config('chambers');
-        $sectors = $chambers['sectors'];
-
-        $sector = collect($sectors)->firstWhere('slug', $slug);
-
-        if (!$sector) {
-            abort(404, 'Sector not found');
-        }
-
-        $relatedSectors = collect($sectors)->where('slug', '!=', $slug)->take(3);
-
-        return view('pages.sectors.show', compact('chambers', 'sector', 'relatedSectors', 'sectors'));
+        return redirect()->route('services', [], 301);
     }
 
     /**
@@ -165,10 +151,9 @@ class PageController extends Controller
     {
         $chambers = config('chambers');
         $workingAreas = $chambers['working_areas'];
-        $sectors = $chambers['sectors'];
         $insights = $chambers['insights'];
 
-        return response()->view('seo.sitemap', compact('workingAreas', 'sectors', 'insights'))
+        return response()->view('seo.sitemap', compact('workingAreas', 'insights'))
             ->header('Content-Type', 'text/xml');
     }
 
@@ -186,3 +171,4 @@ class PageController extends Controller
             ->header('Content-Type', 'text/plain');
     }
 }
+

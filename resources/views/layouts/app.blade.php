@@ -43,12 +43,12 @@
     "legalName": "The Chamber of V R Tomar — Advocate Vishalkumar R Tomar",
     "image": "{{ asset('assets/images/home/about.jpeg') }}",
     "url": "{{ url('/') }}",
-    "telephone": "{{ config('chambers.phone', '+91 98250 88910') }}",
+    "telephone": "{{ config('chambers.phone_tel', '+919898877690') }}",
     "email": "{{ config('chambers.email', 'info@thechamberofvrtomar.com') }}",
     "priceRange": "$$$",
     "address": {
       "@@type": "PostalAddress",
-      "streetAddress": "First Floor, 4D Square Mall, 13, Visat-Gandhinagar Highway",
+      "streetAddress": "FIRST FLOOR, 4D SQUARE MALL, 13, VISAT-GANDHINAGAR HIGHWAY",
       "addressLocality": "Motera, Ahmedabad",
       "addressRegion": "Gujarat",
       "postalCode": "380005",
@@ -100,9 +100,32 @@
 
   <!-- SITE HEADER & NAVIGATION (LUXURY FLOATING MASTER HEADER) -->
   <header class="site-header hero-transparent-header" id="siteHeader">
-    <!-- Top Thin Disclaimer Bar -->
+    <!-- Top Information & Regulatory Compliance Bar -->
     <div class="top-disclaimer-bar">
-      <p>Advocate Vishalkumar R Tomar · High Court of Gujarat · Motera Chambers, Ahmedabad. Informational platform only; does not constitute solicitation or legal advice. <a href="{{ route('disclaimer') }}" data-open-disclaimer>BCI Compliance Notice</a></p>
+      <div class="container top-bar-container">
+        <div class="top-bar-left">
+          <span class="top-bar-item top-bar-address" title="Chambers Headquarters">
+            <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span class="top-address-full">FIRST FLOOR, 4D SQUARE MALL, 13, VISAT-GANDHINAGAR HIGHWAY, Motera, Ahmedabad, Gujarat 380005</span>
+            <span class="top-address-short">4D Square Mall, Motera, Ahmedabad 380005</span>
+          </span>
+          <span class="top-bar-sep">·</span>
+          <a href="tel:{{ config('chambers.phone_tel', '+919898877690') }}" class="top-bar-item top-bar-phone" title="Direct Chambers Phone">
+            <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            <span>{{ config('chambers.phone_display', '98988 77690') }}</span>
+          </a>
+          <span class="top-bar-sep">·</span>
+          <a href="mailto:{{ config('chambers.email', 'info@thechamberofvrtomar.com') }}" class="top-bar-item top-bar-email" title="Direct Email">
+            <svg class="top-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            <span>{{ config('chambers.email', 'info@thechamberofvrtomar.com') }}</span>
+          </a>
+        </div>
+        <div class="top-bar-right">
+          <span class="top-bci-text">Gujarat High Court Advocate</span>
+          <span class="top-bar-sep">|</span>
+          <a href="{{ route('disclaimer') }}" data-open-disclaimer class="top-bci-link">BCI Regulatory Notice</a>
+        </div>
+      </div>
     </div>
 
     <div class="container header-inner">
@@ -156,22 +179,6 @@
             </a>
           </li>
 
-          <!-- Sectors -->
-          <li class="nav-item-has-dropdown">
-            <a href="{{ route('sectors') }}" class="nav-link {{ request()->routeIs('sectors*') ? 'active' : '' }}">
-              Sectors
-              <svg class="dropdown-arrow" viewBox="0 0 10 6" fill="currentColor">
-                <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-              </svg>
-            </a>
-            <div class="nav-dropdown">
-              <a href="{{ route('sectors') }}" class="dropdown-link">All Industry Sectors</a>
-              @foreach(config('chambers.sectors') as $sector)
-              <a href="{{ route('sectors.detail', $sector['slug']) }}" class="dropdown-link">{{ $sector['title'] }}</a>
-              @endforeach
-            </div>
-          </li>
-
           <!-- Insights -->
           <li><a href="{{ route('insights') }}" class="nav-link {{ request()->routeIs('insights*') ? 'active' : '' }}">Insights</a></li>
 
@@ -209,7 +216,6 @@
         <li><a href="{{ route('services') }}" class="mobile-nav-link {{ request()->routeIs('services*') ? 'active' : '' }}">Working Areas (8 Specializations)</a></li>
         <li><a href="{{ route('gallery') }}" class="mobile-nav-link {{ request()->routeIs('gallery') ? 'active' : '' }}">Chambers &amp; Event Gallery</a></li>
         <li><a href="{{ route('reviews') }}" class="mobile-nav-link {{ request()->routeIs('reviews') ? 'active' : '' }}">Google Reviews (★ 5.0 Rating)</a></li>
-        <li><a href="{{ route('sectors') }}" class="mobile-nav-link {{ request()->routeIs('sectors*') ? 'active' : '' }}">Working Sectors</a></li>
         <li><a href="{{ route('insights') }}" class="mobile-nav-link {{ request()->routeIs('insights*') ? 'active' : '' }}">Legal Insights</a></li>
         <li><a href="{{ route('contact') }}" class="mobile-nav-link {{ request()->routeIs('contact') ? 'active' : '' }}">Contact &amp; Appointments</a></li>
         <li><a href="{{ route('disclaimer') }}" class="mobile-nav-link" style="font-size: 1.1rem; color: var(--color-gold-antique);">Regulatory Disclaimer</a></li>
@@ -218,8 +224,14 @@
 
     <div class="mobile-drawer-footer">
       <a href="{{ route('contact') }}" class="btn btn-gold" style="width: 100%;">Schedule Consultation</a>
-      <div style="font-size: 0.72rem; color: var(--color-text-light-muted); margin-top: 1.25rem; line-height: 1.5;">
-        4D Square Mall, Motera, Ahmedabad<br>
+      <div style="font-size: 0.72rem; color: var(--color-text-light-muted); margin-top: 1.25rem; line-height: 1.6;">
+        <strong style="color: #FFFFFF;">THE CHAMBER OF V R TOMAR</strong><br>
+        FIRST FLOOR, 4D SQUARE MALL, 13,<br>
+        VISAT-GANDHINAGAR HIGHWAY, Motera,<br>
+        Ahmedabad, Gujarat 380005<br>
+        <span style="display: inline-block; margin-top: 0.4rem;">
+          Direct: <a href="tel:{{ config('chambers.phone_tel', '+919898877690') }}" style="color: var(--color-gold-antique); font-weight: 700; text-decoration: none;">{{ config('chambers.phone_display', '98988 77690') }}</a>
+        </span><br>
         Email: {{ config('chambers.email', 'info@thechamberofvrtomar.com') }}
       </div>
     </div>
@@ -266,7 +278,6 @@
             <li><a href="{{ route('services') }}">8 Practice Areas Directory</a></li>
             <li><a href="{{ route('gallery') }}">Chambers &amp; Event Gallery</a></li>
             <li><a href="{{ route('reviews') }}">Client Reviews (5.0 Rating)</a></li>
-            <li><a href="{{ route('sectors') }}">Working Industry Sectors</a></li>
             <li><a href="{{ route('insights') }}">Legal Insights &amp; Articles</a></li>
             <li><a href="{{ route('contact') }}">Contact &amp; Appointments</a></li>
           </ul>
@@ -295,10 +306,7 @@
             Email: <a href="mailto:{{ config('chambers.email') }}" style="color: inherit; text-decoration: underline;">{{ config('chambers.email') }}</a>
           </p>
           <p style="font-size: 0.88rem; color: var(--color-text-light-muted); margin-bottom: 0.5rem;">
-            Chambers Line: <a href="tel:{{ config('chambers.phone') }}" style="color: inherit;">{{ config('chambers.phone') }}</a>
-          </p>
-          <p style="font-size: 0.88rem; color: var(--color-text-light-muted);">
-            Registry Office: {{ config('chambers.registry_phone') }}
+            Direct Chambers Line: <a href="tel:{{ config('chambers.phone_tel', '+919898877690') }}" style="color: #FFFFFF; font-weight: 600;">{{ config('chambers.phone_display', '98988 77690') }}</a>
           </p>
         </div>
       </div>

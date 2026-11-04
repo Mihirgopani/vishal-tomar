@@ -491,34 +491,93 @@ img, svg {
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Thin Top Regulatory Disclaimer Bar (Single line, centered, exact HRU Legal aesthetic) */
+/* Thin Top Information & Regulatory Compliance Bar */
 .top-disclaimer-bar {
-  background: rgba(8, 3, 6, 0.55);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-  padding: 0.42rem 1.5rem;
-  text-align: center;
+  background: rgba(8, 3, 6, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(197, 161, 91, 0.22);
+  padding: 0.42rem 0;
   width: 100%;
-}
-
-.top-disclaimer-bar p {
   font-family: var(--font-sans);
-  font-size: 0.73rem;
-  letter-spacing: 0.05em;
-  color: rgba(247, 242, 237, 0.72);
-  margin: 0;
-  line-height: 1.35;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-size: 0.74rem;
+  letter-spacing: 0.03em;
+  color: rgba(247, 242, 237, 0.88);
 }
 
-.top-disclaimer-bar a {
+.top-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.top-bar-left,
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  white-space: nowrap;
+}
+
+.top-bar-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: rgba(247, 242, 237, 0.88);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.top-bar-item:hover {
+  color: #FFFFFF;
+}
+
+.top-bar-item.top-bar-phone {
   color: var(--color-gold-champagne);
+  font-weight: 600;
+}
+
+.top-bar-item.top-bar-phone:hover {
+  color: #FFFFFF;
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
+}
+
+.top-icon {
+  width: 12px;
+  height: 12px;
+  color: var(--color-gold-antique);
+  flex-shrink: 0;
+}
+
+.top-bar-sep {
+  color: var(--color-gold-antique);
+  opacity: 0.45;
+  font-weight: 300;
+}
+
+.top-bci-text {
+  color: rgba(247, 242, 237, 0.75);
+  font-size: 0.71rem;
+}
+
+.top-bci-link {
+  color: var(--color-gold-antique);
   text-decoration: underline;
   text-underline-offset: 2px;
-  margin-left: 0.35rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.top-bci-link:hover {
+  color: #FFFFFF;
+}
+
+.top-address-short {
+  display: none;
 }
 
 /* On Homepage Hero, header floats transparently directly over the slider */
@@ -591,52 +650,55 @@ img, svg {
 
 .brand-title {
   font-family: var(--font-cinzel), var(--font-serif);
-  font-size: 1.42rem;
+  font-size: 1.34rem;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
   color: #FFFFFF;
   line-height: 1;
   text-transform: uppercase;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
 }
 
 .brand-subtitle {
   font-family: var(--font-sans);
-  font-size: 0.62rem;
+  font-size: 0.58rem;
   font-weight: 600;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.22em;
   color: var(--color-gold-antique);
   text-transform: uppercase;
-  margin-top: 0.34rem;
+  margin-top: 0.32rem;
+  white-space: nowrap;
 }
 
 /* Navigation Links */
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 2.2rem;
+  gap: 1.6rem;
 }
 
 .nav-list {
   display: flex;
   list-style: none;
   align-items: center;
-  gap: 2rem;
+  gap: 1.4rem;
 }
 
 .nav-link {
   font-family: var(--font-sans);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 500;
   letter-spacing: 0.08em;
   color: rgba(255, 255, 255, 0.92);
   text-transform: uppercase;
   position: relative;
-  padding: 0.5rem 0;
+  padding: 0.45rem 0;
   text-decoration: none;
   transition: var(--transition);
   display: inline-flex;
   align-items: center;
+  white-space: nowrap !important;
 }
 
 .nav-link::after {
@@ -2919,5 +2981,86 @@ textarea.form-control {
   }
   .gallery-masonry-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   SIDEBAR ARCHITECTURE & CONTENT COLUMN SYSTEM
+   ========================================================================== */
+
+.layout-with-sidebar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 3.5rem;
+  align-items: flex-start;
+}
+
+.article-content {
+  min-width: 0;
+  width: 100%;
+}
+
+.sidebar {
+  position: sticky;
+  top: calc(var(--header-height) + 50px);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sidebar-widget {
+  background: #FFFFFF;
+  border: 1px solid #E9DFD5;
+  padding: 2.25rem 2rem;
+  border-radius: var(--radius-xs);
+  box-shadow: 0 6px 20px rgba(75, 25, 41, 0.04);
+}
+
+.sidebar-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--color-burgundy-deep);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid #F0E6DD;
+  font-weight: 700;
+}
+
+.sidebar-links-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.sidebar-links-list li a {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+  padding: 0.55rem 0.85rem;
+  border-left: 2px solid transparent;
+  transition: var(--transition);
+  border-radius: 2px;
+  text-decoration: none;
+}
+
+.sidebar-links-list li a:hover,
+.sidebar-links-list li a.active {
+  color: var(--color-burgundy-royal);
+  border-left-color: var(--color-gold-antique);
+  background: #FAF7F4;
+  padding-left: 1.1rem;
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .layout-with-sidebar {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .sidebar {
+    position: static;
   }
 }

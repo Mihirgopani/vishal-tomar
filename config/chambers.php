@@ -6,15 +6,16 @@ return [
     'designation' => 'Advocate, High Court of Gujarat',
     'bar_forum' => 'Gujarat High Court · Ahmedabad',
     'email' => 'info@thechamberofvrtomar.com',
-    'phone' => '+91 98250 88910',
-    'phone_display' => '+91 98250 88910',
-    'registry_phone' => '+91 (079) 4890 1313',
+    'phone' => '98988 77690',
+    'phone_display' => '98988 77690',
+    'phone_tel' => '+919898877690',
+    'registry_phone' => '98988 77690',
     'social' => [
         'instagram' => 'https://www.instagram.com/adv_vrtomar/',
         'google_reviews' => 'https://share.google/es88m4d7AuWNRN1Ag',
     ],
     'address' => [
-        'full' => 'FIRST FLOOR, 4D SQUARE MALL, 13, VISAT-GANDHINAGAR HIGHWAY, Motera, Ahmedabad, Gujarat 380005, India',
+        'full' => 'FIRST FLOOR, 4D SQUARE MALL, 13, VISAT-GANDHINAGAR HIGHWAY, Motera, Ahmedabad, Gujarat 380005',
         'floor' => 'First Floor, 4D Square Mall',
         'street' => '13, Visat-Gandhinagar Highway',
         'locality' => 'Motera',
@@ -350,32 +351,6 @@ return [
             'subtitle' => 'Chamber Members & Dignitary Delegation',
         ],
     ],
-    'sectors' => [
-        [
-            'slug' => 'infrastructure-energy',
-            'title' => 'Infrastructure & Energy (EPC)',
-            'icon' => 'assets/icons/infrastructure.svg',
-            'summary' => 'Advising infrastructure developers, highway contractors, EPC consortia, and solar energy companies on public procurement challenges, delay damages, bank guarantee encashments, and municipal arbitrations in Gujarat.',
-        ],
-        [
-            'slug' => 'manufacturing-heavy-industry',
-            'title' => 'Manufacturing & Heavy Industry',
-            'icon' => 'assets/icons/manufacturing.svg',
-            'summary' => 'Legal risk management for GIDC industrial units, engineering plants, and chemical manufacturers across environmental tribunals (NGT), industrial licensing disputes, and supply chain defaults.',
-        ],
-        [
-            'slug' => 'banking-financial-services',
-            'title' => 'Banking & Financial Services',
-            'icon' => 'assets/icons/banking.svg',
-            'summary' => 'Litigation before the Debt Recovery Tribunal (DRT), SARFAESI enforcement challenges, consortium loan defaults, and defense against multi-crore financial investigations.',
-        ],
-        [
-            'slug' => 'technology-emerging-ventures',
-            'title' => 'Technology & Emerging Ventures',
-            'icon' => 'assets/icons/technology.svg',
-            'summary' => 'Guiding fintech innovators, IT enterprises, and emerging ventures on data protection audits, founder dispute mitigation, and Information Technology Act regulatory adherence.',
-        ],
-    ],
     'insights' => [
         [
             'slug' => 'writ-jurisdiction-commercial-tenders',
@@ -406,3 +381,4 @@ return [
         ],
     ],
 ];
+
