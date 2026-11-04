@@ -468,50 +468,114 @@ function initLiveSearch() {
   });
 }
 
-/* --- 07. CONTACT & CONSULTATION FORM VALIDATION --- */
+/* --- 07. CONTACT & CONSULTATION FORM VALIDATION & LARAVEL SUBMISSION --- */
 function initContactForm() {
   const form = document.getElementById('consultationForm');
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
+  form.addEventListener('submit', async (e) => {
+    // If form has no action attribute or is pure prototype, handle simply
+    if (!form.getAttribute('action')) {
+      e.preventDefault();
+      return;
+    }
 
-    // Basic validation
+    // Client-side quick checks
     const name = form.querySelector('[name="name"]');
     const email = form.querySelector('[name="email"]');
     const phone = form.querySelector('[name="phone"]');
     const practice = form.querySelector('[name="practice_area"]');
     const message = form.querySelector('[name="message"]');
     const consent = form.querySelector('[name="consent"]');
+    const submitBtn = document.getElementById('submitConsultationBtn');
 
-    if (!name.value.trim()) {
-      showToast('Please enter your full name.', 'error');
-      name.focus();
+    if (!name || !name.value.trim()) {
+      e.preventDefault();
+      showToast('Please enter your full name or entity name.', 'error');
+      if (name) name.focus();
       return;
     }
 
-    if (!email.value.trim() || !email.value.includes('@')) {
+    if (!email || !email.value.trim() || !email.value.includes('@')) {
+      e.preventDefault();
       showToast('Please enter a valid business or personal email address.', 'error');
-      email.focus();
+      if (email) email.focus();
       return;
     }
 
-    if (!phone.value.trim() || phone.value.length < 8) {
+    if (!phone || !phone.value.trim() || phone.value.length < 8) {
+      e.preventDefault();
       showToast('Please provide a contact phone number.', 'error');
-      phone.focus();
+      if (phone) phone.focus();
+      return;
+    }
+
+    if (!practice || !practice.value) {
+      e.preventDefault();
+      showToast('Please select your primary working area.', 'error');
+      if (practice) practice.focus();
+      return;
+    }
+
+    if (!message || !message.value.trim() || message.value.trim().length < 15) {
+      e.preventDefault();
+      showToast('Please provide at least a brief summary of the matter (min 15 chars).', 'error');
+      if (message) message.focus();
       return;
     }
 
     if (consent && !consent.checked) {
-      showToast('Please review and check the confidentiality acknowledgement.', 'error');
-      consent.focus();
+      e.preventDefault();
+      showToast('Please review and check the regulatory acknowledgement.', 'error');
+      if (consent) consent.focus();
       return;
     }
 
-    // Success Simulation
-    const referenceId = 'VT-' + Math.floor(100000 + Math.random() * 900000);
-    showConsultationConfirmationModal(name.value, referenceId);
-    form.reset();
+    // Attempt smooth AJAX submission to Laravel ContactController
+    e.preventDefault();
+
+    const originalBtnText = submitBtn ? submitBtn.innerHTML : 'SUBMIT';
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'TRANSMITTING INTAKE TO REGISTRY...';
+    }
+
+    try {
+      const formData = new FormData(form);
+      const response = await fetch(form.action, {
+        method: 'POST',
+        headers: {
+          'X-Requested-With': 'XMLHttpRequest',
+          'Accept': 'application/json',
+        },
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        showConsultationConfirmationModal(data.client_name || name.value, data.reference_id);
+        form.reset();
+      } else {
+        // Validation errors returned from server
+        let errorMsg = 'Please verify your form details.';
+        if (data.errors) {
+          errorMsg = Object.values(data.errors).flat().join('<br>');
+        } else if (data.message) {
+          errorMsg = data.message;
+        }
+        showToast(errorMsg, 'error');
+      }
+    } catch (err) {
+      console.warn('AJAX submission error, falling back to standard submit:', err);
+      // Fallback: submit form natively
+      form.submit();
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnText;
+      }
+    }
   });
 }
 
@@ -526,14 +590,14 @@ function showConsultationConfirmationModal(name, refId) {
           <polyline points="20 6 9 17 4 12"></polyline>
         </svg>
       </div>
-      <div class="bci-modal-subtitle">CHAMBERS OF Vishalkumar R Tomar</div>
+      <div class="bci-modal-subtitle">THE CHAMBER OF V R TOMAR · GUJARAT HIGH COURT</div>
       <h3 class="bci-modal-title" style="font-size: 1.8rem;">Enquiry Transmitted</h3>
       <p style="color: var(--color-gold-champagne); font-style: italic; margin-bottom: 1.5rem;">
-        Reference: #${refId}
+        Intake Reference: #${refId}
       </p>
       <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(197,161,91,0.25); padding: 1.25rem; text-align: left; margin-bottom: 1.75rem; font-size: 0.9rem; color: var(--color-text-light-muted); line-height: 1.6;">
         <p style="margin-bottom: 0.5rem;"><strong style="color: var(--color-text-light);">Thank you, ${name}.</strong></p>
-        <p style="margin-bottom: 0;">This prototype demonstrates the frontend consultation transmission flow. Under Bar Council of India guidelines, all matter details are kept strictly privileged upon formal retainer.</p>
+        <p style="margin-bottom: 0;">Your legal consultation request has been recorded securely and dispatched to <strong>info@thechamberofvrtomar.com</strong>. Advocate Vishalkumar R Tomar’s registry team will review your matter and contact you shortly.</p>
       </div>
       <button class="btn btn-gold" id="closeConfirmationBtn" style="width: 100%;">RETURN TO CHAMBERS</button>
     </div>
