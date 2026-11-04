@@ -102,3 +102,4 @@ server {
 - **Anti-Spam Case Intake System:** Includes dual honeypot traps and submission rate timing protection.
 - **Verified Client Testimonials:** Highlighting real client reviews (5.0 rating).
 - **SEO Ready:** OpenGraph, Twitter cards, XML sitemap (`/sitemap.xml`), and schema.org legal service structured data.
+
