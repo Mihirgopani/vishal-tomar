@@ -56,8 +56,8 @@
       <div class="gallery-masonry-grid" id="galleryGrid">
         @foreach($gallery as $idx => $item)
         <article class="gallery-card" data-category="{{ $item['category'] }}" data-src="{{ asset($item['src']) }}" data-title="{{ $item['title'] }}" data-subtitle="{{ $item['subtitle'] }}" data-tag="{{ $item['category_label'] }}">
-          <div class="gallery-card-thumb-wrap {{ str_contains($item['src'], 'other-') || str_contains($item['src'], 'about') ? 'portrait-aspect' : '' }}">
-            <img src="{{ asset($item['src']) }}" alt="{{ $item['alt'] }}" class="gallery-card-img" loading="lazy">
+          <div class="gallery-card-thumb-wrap {{ ($item['aspect'] ?? '') === 'portrait' || str_contains($item['src'], 'other-') || str_contains($item['src'], 'about') ? 'portrait-aspect' : '' }}">
+            <img src="{{ asset($item['src']) }}" alt="{{ $item['alt'] }}" class="gallery-card-img" style="{{ isset($item['position']) ? 'object-position: ' . $item['position'] . ';' : '' }}" loading="lazy">
             <div class="gallery-card-overlay">
               <div style="color: #fff;">
                 <span style="font-size: 0.65rem; color: var(--color-gold-antique); font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; display: block; margin-bottom: 0.2rem;">

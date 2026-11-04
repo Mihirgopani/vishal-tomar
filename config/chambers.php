@@ -269,6 +269,8 @@ return [
             'category_label' => 'Chambers & Counsel',
             'title' => 'Advocate Vishalkumar R Tomar',
             'subtitle' => 'Lead Counsel & Founder, The Chamber of V R Tomar',
+            'aspect' => 'portrait',
+            'position' => 'center 42%',
         ],
         [
             'src' => 'assets/images/home/other-1.jpeg',
@@ -277,6 +279,8 @@ return [
             'category_label' => 'Chambers & Counsel',
             'title' => 'Counsel in Robes',
             'subtitle' => 'Advocate, High Court of Gujarat Enclave',
+            'aspect' => 'portrait',
+            'position' => 'center center',
         ],
         [
             'src' => 'assets/images/home/other-2.jpeg',
@@ -285,6 +289,8 @@ return [
             'category_label' => 'Chambers & Counsel',
             'title' => 'Executive Chambers Consultation',
             'subtitle' => 'Chambers Headquarters, 4D Square Mall, Motera',
+            'aspect' => 'portrait',
+            'position' => 'center center',
         ],
         [
             'src' => 'assets/images/with_client_celebrities/image-1.jpeg',
