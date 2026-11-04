@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Advocate Vishalkumar R Tomar — The Chamber of V R Tomar | Gujarat High Court')
+@section('title', 'Advocate Vishalkumar R Tomar — The Chamber of V R Tomar | High Court of Gujarat')
 @section('meta_description', 'The Chamber of V R Tomar, Advocate Vishalkumar R Tomar, High Court of Gujarat. Strategic counsel in Criminal Litigation, White Collar Crime, Cyber Crime, Civil Disputes, Constitutional Writs, and ADR in Ahmedabad.')
 
 @section('content')
@@ -12,7 +12,7 @@
     <div class="hero-overlay-left"></div>
     <div class="hero-overlay-bottom"></div>
 
-    <!-- Background Slides (3 Gujarat High Court Scenes) -->
+    <!-- Background Slides (3 High Court of Gujarat Scenes) -->
     <div class="hero-slides-wrapper">
       <div class="hero-slide active" data-index="0">
         <div class="hero-slide-bg" style="background-image: url('{{ asset('assets/images/hero-slider-gujarat-hc-1.webp') }}');"></div>
@@ -32,7 +32,7 @@
         <!-- Slide Content 01 -->
         <article class="hero-content-slide active" data-slide-index="0">
           <div class="hero-eyebrow-wrapper">
-            <span class="hero-eyebrow-text">ADVOCATE · GUJARAT HIGH COURT</span>
+            <span class="hero-eyebrow-text">ADVOCATE · HIGH COURT OF GUJARAT</span>
             <div class="hero-eyebrow-line"></div>
           </div>
           <h1 class="hero-headline">
@@ -68,7 +68,7 @@
             <span class="headline-gold">REPRESENTATION</span>
           </h2>
           <p class="hero-subtext">
-            Protecting liberty, defending against multi-agency financial allegations, and conducting rigorous trial and appellate cross-examinations before Sessions Courts and Gujarat High Court.
+            Protecting liberty, defending against multi-agency financial allegations, and conducting rigorous trial and appellate cross-examinations before Sessions Courts and High Court of Gujarat.
           </p>
           <div class="hero-cta-group">
             <a href="{{ route('contact') }}" class="btn-gold-solid">
@@ -109,7 +109,7 @@
           </div>
           <div class="hero-tag-badge">
             <span class="badge-dot"></span>
-            <span>GUJARAT HIGH COURT &amp; COMMERCIAL ARBITRATION</span>
+            <span>HIGH COURT OF GUJARAT &amp; COMMERCIAL ARBITRATION</span>
           </div>
         </article>
 

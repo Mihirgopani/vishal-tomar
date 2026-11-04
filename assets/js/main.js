@@ -1,5 +1,5 @@
 /**
- * Vishalkumar R Tomar — ADVOCATE, GUJARAT HIGH COURT
+ * Vishalkumar R Tomar — ADVOCATE, HIGH COURT OF GUJARAT
  * Interactive Script & Client Experience Engine
  */
 
@@ -590,7 +590,7 @@ function showConsultationConfirmationModal(name, refId) {
           <polyline points="20 6 9 17 4 12"></polyline>
         </svg>
       </div>
-      <div class="bci-modal-subtitle">THE CHAMBER OF V R TOMAR · GUJARAT HIGH COURT</div>
+      <div class="bci-modal-subtitle">THE CHAMBER OF V R TOMAR · HIGH COURT OF GUJARAT</div>
       <h3 class="bci-modal-title" style="font-size: 1.8rem;">Enquiry Transmitted</h3>
       <p style="color: var(--color-gold-champagne); font-style: italic; margin-bottom: 1.5rem;">
         Intake Reference: #${refId}

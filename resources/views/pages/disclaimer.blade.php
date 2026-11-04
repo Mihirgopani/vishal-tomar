@@ -64,7 +64,7 @@
         </p>
 
         <div style="border-top: 1px solid rgba(197, 161, 91, 0.3); padding-top: 1.25rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.8rem; color: #D8C08A;">
-          <span>Advocate Vishalkumar R Tomar · Gujarat High Court</span>
+          <span>Advocate Vishalkumar R Tomar · High Court of Gujarat</span>
           <span style="letter-spacing: 0.15em; text-transform: uppercase;">Ahmedabad Chambers</span>
         </div>
       </div>

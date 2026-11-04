@@ -149,7 +149,7 @@ class ChambersWebsiteTest extends TestCase
             'email' => 'client@thechamberofvrtomar.com',
             'phone' => '+91 98250 11223',
             'practice_area' => 'Criminal Litigation',
-            'court_forum' => 'Gujarat High Court',
+            'court_forum' => 'High Court of Gujarat',
             'message' => 'Seeking urgent legal consultation regarding appellate revision proceedings before the High Court of Gujarat.',
             'consent' => '1',
         ];

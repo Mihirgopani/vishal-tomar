@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Vishalkumar R Tomar — ADVOCATE, GUJARAT HIGH COURT
+   Vishalkumar R Tomar — ADVOCATE, HIGH COURT OF GUJARAT
    Responsive Design & Mobile Ergonomics
    ========================================================================== */
 
@@ -31,6 +31,10 @@
 @media (max-width: 1200px) {
   :root {
     --container-max: 1040px;
+  }
+
+  .brand-link {
+    margin-right: 1.5rem;
   }
 
   .site-nav {

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'About Advocate Vishalkumar R Tomar — The Chamber of V R Tomar | Gujarat High Court')
+@section('title', 'About Advocate Vishalkumar R Tomar — The Chamber of V R Tomar | High Court of Gujarat')
 @section('meta_description', 'Biography, core philosophy, courtroom admissions, and chambers ethos of Advocate Vishalkumar R Tomar, practicing before the High Court of Gujarat, Sessions Courts, and Commercial Tribunals in Ahmedabad.')
 
 @section('content')
@@ -80,7 +80,7 @@
         <div class="eyebrow">The Advocate</div>
         <h2>Vishalkumar R Tomar</h2>
         <h3 style="font-family: var(--font-sans); font-size: 1rem; color: var(--color-gold-antique); font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; margin-bottom: 1.5rem;">
-          Lead Counsel, The Chamber of V R Tomar · Gujarat High Court
+          Lead Counsel, The Chamber of V R Tomar · High Court of Gujarat
         </h3>
         
         <p class="lead">

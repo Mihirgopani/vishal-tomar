@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | The Chamber of V R Tomar — Web Routes
-| Advocate Vishalkumar R Tomar | Gujarat High Court
+| Advocate Vishalkumar R Tomar | High Court of Gujarat
 |--------------------------------------------------------------------------
 */
 

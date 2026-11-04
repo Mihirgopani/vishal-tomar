@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Legal Insights & Scholarship — The Chamber of V R Tomar | Gujarat High Court')
+@section('title', 'Legal Insights & Scholarship — The Chamber of V R Tomar | High Court of Gujarat')
 @section('meta_description', 'Jurisprudential analysis, High Court case digests, and strategic legal commentary by Advocate Vishalkumar R Tomar and his chambers.')
 
 @section('content')
@@ -29,7 +29,7 @@
       </h1>
 
       <p class="page-cinematic-desc">
-        Rigorous legal commentary examining Gujarat High Court jurisprudence, Supreme Court constitutional precedents, and evolving procedural doctrines.
+        Rigorous legal commentary examining High Court of Gujarat jurisprudence, Supreme Court constitutional precedents, and evolving procedural doctrines.
       </p>
 
       <div class="hero-tag-badge" style="opacity: 1; transform: none; margin-top: 1.5rem;">

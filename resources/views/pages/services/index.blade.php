@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Working Areas & Legal Practice — The Chamber of V R Tomar | Gujarat High Court')
+@section('title', 'Working Areas & Legal Practice — The Chamber of V R Tomar | High Court of Gujarat')
 @section('meta_description', 'Explore our 8 specialized legal working areas: Criminal Litigation, White Collar Crime, Cyber Crime, Civil Disputes, Constitutional Writs, ADR, Risk Management, and Due Compliance.')
 
 @section('content')
@@ -34,7 +34,7 @@
 
       <div class="hero-tag-badge" style="opacity: 1; transform: none; margin-top: 1.5rem;">
         <span class="badge-dot"></span>
-        <span>8 PRIMARY SPECIALIZATIONS · GUJARAT HIGH COURT &amp; TRIBUNALS</span>
+        <span>8 PRIMARY SPECIALIZATIONS · HIGH COURT OF GUJARAT &amp; TRIBUNALS</span>
       </div>
     </div>
   </section>

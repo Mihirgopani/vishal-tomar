@@ -218,7 +218,7 @@
 
           <div class="form-group">
             <label class="form-label" for="courtForum">Court / Tribunal Forum (Optional)</label>
-            <input type="text" id="courtForum" name="court_forum" class="form-control" value="{{ old('court_forum') }}" placeholder="e.g. Gujarat High Court / Sessions Court Ahmedabad / NCLT / Arbitral Tribunal">
+            <input type="text" id="courtForum" name="court_forum" class="form-control" value="{{ old('court_forum') }}" placeholder="e.g. High Court of Gujarat / Sessions Court Ahmedabad / NCLT / Arbitral Tribunal">
           </div>
 
           <div class="form-group">

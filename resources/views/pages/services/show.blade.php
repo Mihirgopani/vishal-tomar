@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $service['title'] . ' — Advocate Vishalkumar R Tomar | Gujarat High Court')
+@section('title', $service['title'] . ' — Advocate Vishalkumar R Tomar | High Court of Gujarat')
 @section('meta_description', $service['summary'] . ' Chambers of Vishalkumar R Tomar, Motera, Ahmedabad.')
 
 @section('content')
@@ -103,7 +103,7 @@
         <div class="bio-quote-callout" style="margin-bottom: 2.5rem;">
           "Effective advocacy in {{ strtolower($service['title']) }} requires both forensic mastery of the evidentiary paper trail and an instinctive ability to articulate core legal propositions under bench pressure."
           <div style="font-size: 0.78rem; font-style: normal; margin-top: 0.5rem; color: var(--color-gold-antique); font-weight: 700;">
-            — Advocate Vishalkumar R Tomar · Gujarat High Court
+            — Advocate Vishalkumar R Tomar · High Court of Gujarat
           </div>
         </div>
 

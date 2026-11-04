@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>@yield('title', 'Advocate Vishalkumar R Tomar — The Chamber of V R Tomar | Gujarat High Court')</title>
-  <meta name="description" content="@yield('meta_description', 'The Chamber of V R Tomar, led by Advocate Vishalkumar R Tomar at Gujarat High Court. Specialized legal counsel in Criminal Litigation, White Collar Crime, Cyber Crime, Civil Disputes, Constitutional Writs, and ADR.')">
-  <meta name="keywords" content="Vishalkumar R Tomar, Advocate Vishal Tomar, Chamber of V R Tomar, Gujarat High Court lawyer, Criminal lawyer Ahmedabad, White Collar Crime Gujarat, Cyber Crime advocate, Civil Litigation Gujarat High Court, Motera lawyer, 4D Square Mall advocate">
+  <title>@yield('title', 'Advocate Vishalkumar R Tomar — The Chamber of V R Tomar | High Court of Gujarat')</title>
+  <meta name="description" content="@yield('meta_description', 'The Chamber of V R Tomar, led by Advocate Vishalkumar R Tomar at High Court of Gujarat. Specialized legal counsel in Criminal Litigation, White Collar Crime, Cyber Crime, Civil Disputes, Constitutional Writs, and ADR.')">
+  <meta name="keywords" content="Vishalkumar R Tomar, Advocate Vishal Tomar, Chamber of V R Tomar, High Court of Gujarat lawyer, Criminal lawyer Ahmedabad, White Collar Crime Gujarat, Cyber Crime advocate, Civil Litigation High Court of Gujarat, Motera lawyer, 4D Square Mall advocate">
   <link rel="canonical" href="{{ url()->current() }}">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ url()->current() }}">
-  <meta property="og:title" content="@yield('og_title', 'Advocate Vishalkumar R Tomar — The Chamber of V R Tomar | Gujarat High Court')">
+  <meta property="og:title" content="@yield('og_title', 'Advocate Vishalkumar R Tomar — The Chamber of V R Tomar | High Court of Gujarat')">
   <meta property="og:description" content="@yield('meta_description', 'Appellate advocacy, criminal defense, white collar investigations, and constitutional writs before the High Court of Gujarat.')">
   <meta property="og:image" content="{{ asset('assets/images/home/about.jpeg') }}">
   <meta property="og:site_name" content="The Chamber of V R Tomar">
@@ -121,7 +121,7 @@
           </a>
         </div>
         <div class="top-bar-right">
-          <span class="top-bci-text">Gujarat High Court Advocate</span>
+          <span class="top-bci-text">High Court of Gujarat Advocate</span>
           <span class="top-bar-sep">|</span>
           <a href="{{ route('disclaimer') }}" data-open-disclaimer class="top-bci-link">BCI Regulatory Notice</a>
         </div>
@@ -135,7 +135,7 @@
         </div>
         <div class="brand-text">
           <span class="brand-title">Vishalkumar R Tomar</span>
-          <span class="brand-subtitle">THE CHAMBER OF V R TOMAR · GUJARAT HIGH COURT</span>
+          <span class="brand-subtitle">THE CHAMBER OF V R TOMAR · HIGH COURT OF GUJARAT</span>
         </div>
       </a>
 
@@ -170,14 +170,6 @@
 
           <!-- Gallery Route -->
           <li><a href="{{ route('gallery') }}" class="nav-link {{ request()->routeIs('gallery') ? 'active' : '' }}">Gallery</a></li>
-
-          <!-- Google Reviews -->
-          <li>
-            <a href="{{ route('reviews') }}" class="nav-link {{ request()->routeIs('reviews') ? 'active' : '' }}" style="display: inline-flex; align-items: center; gap: 0.35rem;">
-              Reviews
-              <span style="font-size: 0.65rem; background: #C5A15B; color: #4B1929; font-weight: 800; padding: 1px 6px; border-radius: 999px;">★ 5.0</span>
-            </a>
-          </li>
 
           <!-- Insights -->
           <li><a href="{{ route('insights') }}" class="nav-link {{ request()->routeIs('insights*') ? 'active' : '' }}">Insights</a></li>
@@ -252,7 +244,7 @@
             <img src="{{ asset('assets/images/logo-monogram.svg') }}" alt="VT Monogram" width="40" height="40">
             <div>
               <div style="font-family: var(--font-serif); font-size: 1.35rem; color: #fff; font-weight: 700; text-transform: uppercase;">THE CHAMBER OF V R TOMAR</div>
-              <div style="font-size: 0.6rem; color: var(--color-gold-antique); letter-spacing: 0.22em; text-transform: uppercase;">Advocate Vishalkumar R Tomar · Gujarat High Court</div>
+              <div style="font-size: 0.6rem; color: var(--color-gold-antique); letter-spacing: 0.22em; text-transform: uppercase;">Advocate Vishalkumar R Tomar · High Court of Gujarat</div>
             </div>
           </div>
           <p class="footer-brand-desc">
@@ -346,7 +338,7 @@
           <path d="M12 3v18M3 7h18M6 7l-3 6h6l-3-6zM18 7l-3 6h6l-3-6z"/>
         </svg>
       </div>
-      <div class="bci-modal-subtitle">THE CHAMBER OF V R TOMAR · GUJARAT HIGH COURT</div>
+      <div class="bci-modal-subtitle">THE CHAMBER OF V R TOMAR · HIGH COURT OF GUJARAT</div>
       <h2 class="bci-modal-title" id="bciModalTitle">Legal Disclaimer &amp; Confirmation</h2>
       <p class="bci-modal-preamble">
         The Bar Council of India restricts solicitation of legal work and advertising by advocates. The contents of this website are published solely for general informational purposes and do not constitute legal advice or legal solicitation.

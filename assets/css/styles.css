@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Vishalkumar R Tomar — ADVOCATE, GUJARAT HIGH COURT
+   Vishalkumar R Tomar — ADVOCATE, HIGH COURT OF GUJARAT
    Master Design System & Stylesheet
    Art Direction: Luxury Legal Editorial / Architectural Restraint
    ========================================================================== */
@@ -67,7 +67,8 @@
   --shadow-gold: 0 8px 30px rgba(197, 161, 91, 0.2);
 
   /* Layout Spacing */
-  --container-max: 1280px;
+  --container-max: 1360px;
+  --container-padding: 2rem;
   --container-narrow: 920px;
   --header-height: 84px;
   --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -493,11 +494,11 @@ img, svg {
 
 /* Thin Top Information & Regulatory Compliance Bar */
 .top-disclaimer-bar {
-  background: rgba(8, 3, 6, 0.88);
+  background: rgba(8, 3, 6, 0.94);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(197, 161, 91, 0.22);
-  padding: 0.42rem 0;
+  padding: 0.45rem 0;
   width: 100%;
   font-family: var(--font-sans);
   font-size: 0.74rem;
@@ -510,9 +511,7 @@ img, svg {
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
-  max-width: var(--container-width);
-  margin: 0 auto;
-  padding: 0 var(--container-padding);
+  width: 100%;
 }
 
 .top-bar-left,
@@ -617,6 +616,7 @@ img, svg {
   align-items: center;
   justify-content: space-between;
   height: var(--header-height);
+  gap: 2.5rem;
 }
 
 /* Brand Identity Wordmark */
@@ -625,6 +625,8 @@ img, svg {
   align-items: center;
   gap: 1.15rem;
   text-decoration: none;
+  flex-shrink: 0;
+  margin-right: 2.5rem;
 }
 
 .brand-monogram-box {
@@ -675,14 +677,15 @@ img, svg {
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 1.6rem;
+  gap: 1.8rem;
+  margin-left: auto;
 }
 
 .nav-list {
   display: flex;
   list-style: none;
   align-items: center;
-  gap: 1.4rem;
+  gap: 1.6rem;
 }
 
 .nav-link {
