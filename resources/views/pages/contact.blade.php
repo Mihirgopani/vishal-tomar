@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('title', 'Contact Chambers & Appointments — The Chamber of V R Tomar | Ahmedabad')
-@section('meta_description', 'Schedule a consultation with Advocate Vishalkumar R Tomar at 4D Square Mall, Motera,
+@section('meta_description',
+    'Schedule a consultation with Advocate Vishalkumar R Tomar at 4D Square Mall, Motera,
     Ahmedabad. Email: info@thechamberofvrtomar.com. Phone: +91 98988 77690.')
 
 @section('content')
@@ -67,9 +68,7 @@
                             <div class="info-title">Chambers Address</div>
                             <div class="info-text">
                                 <strong>THE CHAMBER OF V R TOMAR</strong><br>
-                                SECOND FLOOR, 4D SQUARE MALL, 13,<br>
-                                VISAT-GANDHINAGAR HIGHWAY, Motera,<br>
-                                Ahmedabad, Gujarat 380005, India
+                                17, SECOND FLOOR, 4D SQUARE MALL, VISAT - GANDHINAGAR HIGHWAY, MOTERA, AHMEDABAD, GUJARAT
                             </div>
                         </div>
                     </div>

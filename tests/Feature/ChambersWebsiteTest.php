@@ -101,12 +101,12 @@ class ChambersWebsiteTest extends TestCase
         $response = $this->get(route('home'));
         $response->assertStatus(200);
         $response->assertSee('98988 77690');
-        $response->assertSee('SECOND FLOOR, 4D SQUARE MALL, 13, VISAT-GANDHINAGAR HIGHWAY, Motera, Ahmedabad, Gujarat 380005');
+        $response->assertSee('17, SECOND FLOOR, 4D SQUARE MALL, VISAT - GANDHINAGAR HIGHWAY, MOTERA, AHMEDABAD, GUJARAT');
 
         $contactResponse = $this->get(route('contact'));
         $contactResponse->assertStatus(200);
         $contactResponse->assertSee('98988 77690');
-        $contactResponse->assertSee('SECOND FLOOR, 4D SQUARE MALL');
+        $contactResponse->assertSee('17, SECOND FLOOR, 4D SQUARE MALL');
     }
 
     public function test_insights_pages_render(): void

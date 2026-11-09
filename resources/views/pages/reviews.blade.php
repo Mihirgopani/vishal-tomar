@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('title', 'Google Client Reviews (★ 5.0 Rating) — The Chamber of V R Tomar')
-@section('meta_description', 'Read verified 5.0-star Google reviews and client testimonials for Advocate Vishalkumar R
+@section('meta_description',
+    'Read verified 5.0-star Google reviews and client testimonials for Advocate Vishalkumar R
     Tomar and his legal team in Ahmedabad, Gujarat.')
 
 @section('content')
@@ -62,7 +63,7 @@
                             THE CHAMBER OF V R TOMAR
                         </div>
                         <div style="font-size: 0.88rem; color: var(--color-gold-champagne); margin-top: 0.2rem;">
-                            Second Floor, 4D Square Mall, 13, Visat-Gandhinagar Highway, Motera, Ahmedabad, Gujarat 380005
+                            17, SECOND FLOOR, 4D SQUARE MALL, VISAT - GANDHINAGAR HIGHWAY, MOTERA, AHMEDABAD, GUJARAT
                         </div>
                         <div class="review-tags-cloud">
                             <span class="review-tag-pill">Advocate 15</span>

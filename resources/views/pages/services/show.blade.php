@@ -179,9 +179,7 @@
                     <p
                         style="font-size: 0.85rem; color: var(--color-text-secondary); line-height: 1.5; margin-bottom: 1rem;">
                         <strong>THE CHAMBER OF V R TOMAR</strong><br>
-                        SECOND FLOOR, 4D SQUARE MALL, 13,<br>
-                        VISAT-GANDHINAGAR HIGHWAY, Motera,<br>
-                        Ahmedabad, Gujarat 380005, India
+                        17, SECOND FLOOR, 4D SQUARE MALL, VISAT - GANDHINAGAR HIGHWAY, MOTERA, AHMEDABAD, GUJARAT
                     </p>
                     <div style="font-size: 0.85rem; color: var(--color-burgundy-deep); font-weight: 600;">
                         Email: <a href="mailto:{{ config('chambers.email') }}">{{ config('chambers.email') }}</a><br>

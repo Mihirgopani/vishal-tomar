@@ -87,7 +87,7 @@ server {
 - **Firm Name:** The Chamber of V R Tomar
 - **Lead Counsel:** Advocate Vishalkumar R Tomar
 - **Jurisdiction:** High Court of Gujarat, City Civil & Sessions Courts, Special Fora
-- **Chambers Address:** SECOND FLOOR, 4D SQUARE MALL, VISAT-GANDHINAGAR HIGHWAY, Motera, Ahmedabad, Gujarat 380005
+- **Chambers Address:** 17, SECOND FLOOR, 4D SQUARE MALL, VISAT - GANDHINAGAR HIGHWAY, MOTERA, AHMEDABAD, GUJARAT
 - **Official Phone:** 98988 77690 (`+919898877690`)
 - **Official Inquiries:** info@thechamberofvrtomar.com
 - **Instagram:** https://www.instagram.com/adv_vrtomar/

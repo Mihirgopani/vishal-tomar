@@ -166,8 +166,8 @@
                             style="background-color: #302A2C; padding: 25px 40px; text-align: center; color: #D8C08A; font-size: 11px; line-height: 1.6;">
                             <strong style="color: #FFFFFF; font-size: 12px; display: block; margin-bottom: 4px;">THE
                                 CHAMBER OF V R TOMAR</strong>
-                            Second Floor, 4D Square Mall, 13, Visat-Gandhinagar Highway, Motera, Ahmedabad, Gujarat
-                            380005<br>
+                            17, SECOND FLOOR, 4D SQUARE MALL, VISAT - GANDHINAGAR HIGHWAY, MOTERA, AHMEDABAD, GUJARAT
+                            <br>
                             Advocate Vishalkumar R Tomar · High Court of Gujarat<br>
                             <span style="color: #9C9499; font-size: 10px; display: block; margin-top: 8px;">
                                 CONFIDENTIALITY NOTICE: This transmission is privileged and intended solely for the
