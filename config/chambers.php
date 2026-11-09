@@ -15,9 +15,9 @@ return [
         'google_reviews' => 'https://share.google/es88m4d7AuWNRN1Ag',
     ],
     'address' => [
-        'full' => 'FIRST FLOOR, 4D SQUARE MALL, 13, VISAT-GANDHINAGAR HIGHWAY, Motera, Ahmedabad, Gujarat 380005',
-        'floor' => 'First Floor, 4D Square Mall',
-        'street' => '13, Visat-Gandhinagar Highway',
+        'full' => 'SECOND FLOOR, 4D SQUARE MALL, VISAT-GANDHINAGAR HIGHWAY, Motera, Ahmedabad, Gujarat 380005',
+        'floor' => 'Second Floor, 4D Square Mall',
+        'street' => 'Visat-Gandhinagar Highway',
         'locality' => 'Motera',
         'city' => 'Ahmedabad',
         'state' => 'Gujarat',
